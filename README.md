@@ -2,13 +2,13 @@
 
 
 ## Description
-This is my personal online portfolio `https://bryomajor.herokuapp.com/`
+This is my personal online portfolio ``
 
 
 ## Author
 
 
-* [**Brian Major**](https://github.com/bryomajor)
+* [**Anna Adhiambo**](https://github.com/annaadhiambo/Portfolio.git)
 
 ## Features
 
@@ -35,7 +35,7 @@ Single project page loads | User clicks on project url | User is directed to a n
 ### Cloning
 * In your terminal:
         
-        $ git clone https://github.com/bryomajor/portfolio.git
+        $ git clone https://github.com/annaadhiambo/Portfolio.git
         $ cd web-awards
 
 ## Running the Application
@@ -68,10 +68,10 @@ This application is developed using [Python3.6](https://www.python.org/doc/), [D
 
 
 ## Support and Team
-Brian Major
+Anna Adhiambo
 
 
-[Slack Me!](https://slack.com/intl/en-ke/)  @bryomajor
+[Slack Me!](https://slack.com/intl/en-ke/)  @anna
 
 
 ### License
