@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Slider -->
+<section id="hero-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="block wow fadeInUp" data-wow-delay=".3s">
+                    <section class="cd-intro">
+                        <h1 class="wow fadeInUp animated cd-headline slide" data-wow-delay=".4s">
+                            <span>HI, MY NAME  IS Anna & I AM A</span><br>
+                            <span class="cd-words-wrapper">
+                                <b class="is-visible">DESIGNER</b>
+                                <b>DEVELOPER</b>
+                            </span>
+                        </h1>
+                    </section>
+                    <h2 class="wow fadeInUp animated" data-wow-delay=".6s">
+                        With some months of experience, I've occupied many roles including,<br> web designer and developer. This site showcases some of my work.
+                    </h2>
+                    <a class="btn-lines dark light wow fadeInUp animated smooth-scroll btn btn-default btn-green" data-wow-delay=".9s" href="#works" data-section="#works">View Works</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Slider -->
+
+<!-- About Me -->
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <h2>ABOUT ME</h2>
+                        <p>I'm a Full Stack Developer from Nairobi, Kenya.I am outgoing, dedicated, and open-minded. I get across to people and adjust to changes with ease. I believe that a person should work on developing their skills and learning new things at a time.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <img src="{% static 'images/about.jpg' %}" class="img-responsive" width="80%" height="50px" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About Me -->
+
+<!-- Portfolio -->
+<section id="works" class="works">
+    <div class="container">
+        <div class="section-heading">
+            <h1 class="title wow fadeInDown" data-wow-delay=".3s">Latest Work</h1>
+            <p class="wow fadeInDown" data-wow-delay=".5s">Below are some of the projects that I have gotten opportunity to work on.</p>
+        </div>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-sm-4 col-xs-12">
+                <figure class="wow fadeInLeft animated portfolio-item" data-wow-duration="500ms" data-wow-delay="0ms">
+                    <div class="img-wrapper">
+                        <img src="{{project.image.url}}" class="img-responsive" alt="">
+                        <div class="overlay">
+                            <div class="buttons">
+                                <a rel="gallery" class="fancybox" href="">Full Image</a>
+                                <a href="{% url 'project' project.id %}">See Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <figcaption>
+                        <h4>
+                            <a href="">{{project.name}}</a>
+                        </h4>
+                        <p>
+                            {{project.description | truncatechars:50}}
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- Portfolio End -->
+
+<!-- What I Offer -->
+<section id="feature">
+<div class="container-fluid" id="skills">
+        <div class="container pt-3">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="skills-title">
+                        <h2 class="skills-heading">Skills</h2>
+                        <p class="text-light">Main skills and abilities that i can do</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/html.png' %}" width="60%" alt="">
+                    <h4 class="pt-3">HTML5</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image-1" src="{% static 'images/css.png' %}" width="60%" alt="">
+                    <h4 class="pt-3">CSS 3</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/jquery.png' %}" width="60%" alt="">
+                    <h4>jQuery</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/bootstrap.jpg' %}" width="60%" alt="">
+                    <h4 class="pt-4">Bootstrap</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/git.png' %}" width="60%" alt="">
+                    <h4>Git</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/angular.svg' %}" width="60%" alt="">
+                    <h4>Angular</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/django.png' %}" width="60%" alt="">
+                    <h4>Django</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/react.png' %}" width="60%" alt="">
+                    <h4>React</h4>
+                </div>
+                <div class="col-md-4">
+                    <img class="skill-image" src="{% static 'images/js.png' %}" width="60%" alt="">
+                    <h4 class="pt-3">JavaScript</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
